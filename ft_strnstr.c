@@ -6,13 +6,13 @@
 /*   By: amoracho <amoracho@student.42madrid>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/01/10 17:56:53 by amoracho          #+#    #+#             */
-/*   Updated: 2020/02/29 12:16:15 by amoracho         ###   ########.fr       */
+/*   Updated: 2020/07/08 17:04:26 by amoracho         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdio.h>
 
-char	*strnstr(const char *haystack, const char *needle, size_t len)
+char	*ft_strnstr(const char *haystack, const char *needle, size_t len)
 {
 	size_t	i;
 	int		j;

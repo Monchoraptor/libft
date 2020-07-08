@@ -1,17 +1,17 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memset.c                                                  :+:      :+:    :+:   */
+/*   ft_memset.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: amoracho <amoracho@student.42madrid>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/01/07 13:18:29 by amoracho          #+#    #+#             */
-/*   Updated: 2020/07/07 00:22:00 by amoracho                   ###   ########.fr       */
+/*   Created: 2020/07/08 15:36:55 by amoracho          #+#    #+#             */
+/*   Updated: 2020/07/08 15:36:59 by amoracho         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdio.h>
-#include <bsd/string.h>
+#include <string.h>
 #include <stdlib.h>
 
 void	*ft_memset(void *b, int c, size_t len)

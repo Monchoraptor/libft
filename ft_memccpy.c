@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memccpy.c                                                 :+:      :+:    :+:   */
+/*   ft_memccpy.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: amoracho <amoracho@student.42madrid>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/01/13 14:36:12 by amoracho          #+#    #+#             */
-/*   Updated: 2020/07/07 01:56:08 by amoracho                   ###   ########.fr       */
+/*   Created: 2020/07/08 15:32:44 by amoracho          #+#    #+#             */
+/*   Updated: 2020/07/08 15:35:10 by amoracho         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,8 +16,8 @@ void	*ft_memccpy(void *dst,
 		const void *src, int c, size_t n)
 {
 	size_t		i;
-	char	*s1;
-	char	*s2;
+	char		*s1;
+	char		*s2;
 
 	i = 0;
 	s1 = (char *)src;
@@ -33,7 +33,6 @@ void	*ft_memccpy(void *dst,
 		i++;
 	}
 	return (NULL);
-
 }
 
 /*

@@ -6,7 +6,7 @@
 /*   By: amoracho <amoracho@student.42madrid>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/01/08 18:14:08 by amoracho          #+#    #+#             */
-/*   Updated: 2020/02/29 12:17:20 by amoracho         ###   ########.fr       */
+/*   Updated: 2020/07/08 16:42:41 by amoracho         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,9 +23,11 @@ char	*ft_strrchr(char *s, int c)
 	while (*(s + i) != '\0')
 	{
 		if (*(s + i) == c)
-			p = s + i;
+			p = (s + i);
 		i++;
 	}
+	if (c == '\0')
+		return (s + i);
 	return (p);
 }
 /*

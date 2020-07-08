@@ -1,20 +1,14 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_bzero.c                                                   :+:      :+:    :+:   */
+/*   ft_bzero.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: amoracho <amoracho@student.42madrid>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/01/07 13:32:43 by amoracho          #+#    #+#             */
-/*   Updated: 2020/07/07 01:44:03 by amoracho                   ###   ########.fr       */
+/*   Created: 2020/07/08 15:33:55 by amoracho          #+#    #+#             */
+/*   Updated: 2020/07/08 15:34:36 by amoracho         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-
-/*
-**#include <bsd/string.h>
-**#include <stdlib.h>
-**#include <stdio.h>
-*/
 
 void	*ft_bzero(void *b, int len)
 {
@@ -50,4 +44,4 @@ void	*ft_bzero(void *b, int len)
 **  		printf("%c", s2[i]);
 **	//printf("%s\n%s",s1,s2);
 **}
-*/   
+*/

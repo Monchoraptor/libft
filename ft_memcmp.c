@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memcmp.c                                        :+:      :+:    :+:   */
+/*   ft_memcmp.c arreglar                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: amoracho <amoracho@student.42madrid>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/01/13 16:14:36 by amoracho          #+#    #+#             */
-/*   Updated: 2020/01/29 15:56:40 by amoracho         ###   ########.fr       */
+/*   Updated: 2020/07/08 16:40:12 by amoracho         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,8 +20,8 @@ int	ft_memcmp(const void *s1, const void *s2, size_t n)
 	const char	*p2;
 
 	i = 0;
-	p1 = s1;
-	p2 = s2;
+	p1 = (const char *)s1;
+	p2 = (const char *)s2;
 	while ((p1[i] == p2[i]) && (i < n))
 		i++;
 	return (p1[i] - p2[i]);
@@ -53,3 +53,12 @@ int	ft_memcmp(const void *s1, const void *s2, size_t n)
 **	//printf("Machine:%i\n",memcmp(a,b,10));
 **}
 */
+/*
+int main()
+{
+	char *s1 = "\xff\xaa\xde\x12";
+	char *s2 = "\xff\xaa\xde\x12MACOSAAA";
+	printf("%i\n",ft_memcmp(s1,s2,4));
+	printf("%i",memcmp(s1,s2,4));
+}
+*/	
