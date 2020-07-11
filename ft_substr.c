@@ -6,7 +6,7 @@
 /*   By: amoracho <amoracho@student.42madrid>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/01/13 17:04:29 by amoracho          #+#    #+#             */
-/*   Updated: 2020/07/11 01:32:32 by amoracho                   ###   ########.fr       */
+/*   Updated: 2020/07/11 19:19:44 by amoracho                   ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,7 +32,7 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 		i++;
 		y++;
 	}
-
+	*(p + i) = '\0';	
 	return (p);
 }
 /*
