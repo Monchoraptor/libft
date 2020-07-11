@@ -6,7 +6,7 @@
 /*   By: amoracho <amoracho@student.42madrid>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/01/13 16:14:36 by amoracho          #+#    #+#             */
-/*   Updated: 2020/07/11 16:31:39 by amoracho                   ###   ########.fr       */
+/*   Updated: 2020/07/11 16:52:21 by amoracho                   ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,7 @@ int	ft_memcmp(const void *s1, const void *s2, size_t n)
 	i = 0;
 	p1 = (unsigned char *)s1;
 	p2 = (unsigned char *)s2;
-	while ((p1[i] == p2[i]) && (i < n) && p1[i] && p2[i])
+	while ((p1[i] == p2[i]) && (i < n))
 		i++;
 	if (i == n)
 		return (0);
@@ -55,12 +55,12 @@ int	ft_memcmp(const void *s1, const void *s2, size_t n)
 **	//printf("Machine:%i\n",memcmp(a,b,10));
 **}
 **
-**
-**int main()
-**{
-**	char *s1 = "\xff\xaa\xde\x12";
-**	char *s2 = "\xff\xaa\xde\x12MACOSAAA";
-**	printf("%i\n",ft_memcmp(s1,s2,4));
-**	printf("%i",memcmp(s1,s2,4));
-**}
-*/	
+*/
+int main()
+{
+	char *s1 = ".........";
+	char *s2 = ".........";
+	printf("%i\n",ft_memcmp(s1,s2,10));
+	printf("%i",memcmp(s1,s2,10));
+}
+	
