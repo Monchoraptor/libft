@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strlcpy.c                                       :+:      :+:    :+:   */
+/*   ft_strlcat.c                                                 :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: amoracho <amoracho@student.42madrid>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/01/08 16:12:58 by amoracho          #+#    #+#             */
-/*   Updated: 2020/07/08 17:02:46 by amoracho         ###   ########.fr       */
+/*   Updated: 2020/07/11 00:45:58 by amoracho                   ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,18 +19,20 @@ size_t	ft_strlcat(char *dst, char *src, size_t size)
 	size_t i;
 	size_t j;
 
-	i = 0;
-	while (*(dst + i) != '\0')
-		i++;
-	j = 0;
-	while (i < size - 1)
+	if (size > 0 && size > ft_strlen(dst))
 	{
-		*(dst + i) = *(src + j);
-		i++;
-		j++;
+		i = ft_strlen(dst);
+		j = 0;
+		while (*(src + j) && i < (int)size - 1)
+		{
+			*(dst + i) = *(src + j);
+			i++;
+			j++;
+		}
+		*(dst + i) = '\0';
+		return (ft_strlen(src) + ft_strlen(dst));
 	}
-	*(dst + i) = '\0';
-	return (ft_strlen(src) + size);
+	return (size + ft_strlen(src));
 }
 
 /*

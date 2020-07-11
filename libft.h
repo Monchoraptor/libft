@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   libft.h                                            :+:      :+:    :+:   */
+/*   libft.h                                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: amoracho <amoracho@student.42madrid>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/01/29 14:12:33 by amoracho          #+#    #+#             */
-/*   Updated: 2020/07/08 17:03:22 by amoracho         ###   ########.fr       */
+/*   Updated: 2020/07/11 05:47:04 by amoracho                   ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,11 +15,11 @@
 
 # include <stdlib.h>
 # include <unistd.h>
+# include <stdio.h>
 
 int				ft_atoi(const char *str);
 void			*ft_bzero(void *b, int len);
 void			*ft_calloc(size_t count, size_t size);
-int				ft_countuntil(char const *s, char c);
 int				ft_isalpha(int c);
 int				ft_isascii(int c);
 int				ft_isdigit(int c);
@@ -37,7 +37,7 @@ void			ft_putchar_fd(char c, int fd);
 void			ft_putendl_fd(char *s, int fd);
 void			ft_putnbr_fd(int n, int fd);
 void			ft_putstr_fd(char *s, int fd);
-size_t			ft_strlen(char *s);
+size_t			ft_strlen(const char *s);
 size_t			ft_strlcat(char *dst, char *src, size_t size);
 size_t			ft_strlcpy(char *dst, char *src, size_t size);
 int				ft_tolower(int c);

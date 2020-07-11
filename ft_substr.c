@@ -1,18 +1,19 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_substr.c                                        :+:      :+:    :+:   */
+/*   ft_substr.c                                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: amoracho <amoracho@student.42madrid>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/01/13 17:04:29 by amoracho          #+#    #+#             */
-/*   Updated: 2020/02/29 12:18:23 by amoracho         ###   ########.fr       */
+/*   Updated: 2020/07/11 01:32:32 by amoracho                   ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
+#include "libft.h"
 
 char	*ft_substr(char const *s, unsigned int start, size_t len)
 {
@@ -20,7 +21,9 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 	size_t	y;
 	char	*p;
 
-	p = malloc(len);
+	p = malloc(len + 1);
+	if (p == 0 || (len + start) > ft_strlen(s) || start > ft_strlen(s))
+		return (0);
 	i = 0;
 	y = start;
 	while ((i < len) && (s[y] != 0))
@@ -29,14 +32,19 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 		i++;
 		y++;
 	}
+
 	return (p);
 }
 /*
-**int main()
+**int main(int argc, char **argv)
 **{
-**	char a[10] = "qwerty";
-**	char b[10] = "";
-**	strlcat(b,ft_substr(a,0,6),10);
-**	printf("%s",b);
+** //	char a[10] = "qwerty";
+** //	char b[10] = "";
+**	char *s;	
+**	s = ft_substr(argv[1],argv[2][0]-'0',10);
+**	if (s != 0)
+**		printf("%s",s);
+**	printf("\n%s",ft_substr(argv[1],argv[2][0]-'0',10));
+** //argv[3][0]-'0'));
 **}
 */

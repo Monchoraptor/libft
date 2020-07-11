@@ -1,16 +1,17 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strnstr.c                                       :+:      :+:    :+:   */
+/*   ft_strnstr.c                                                 :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: amoracho <amoracho@student.42madrid>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/01/10 17:56:53 by amoracho          #+#    #+#             */
-/*   Updated: 2020/07/08 17:04:26 by amoracho         ###   ########.fr       */
+/*   Updated: 2020/07/11 01:36:11 by amoracho                   ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdio.h>
+#include "libft.h"
 
 char	*ft_strnstr(const char *haystack, const char *needle, size_t len)
 {
@@ -33,13 +34,13 @@ char	*ft_strnstr(const char *haystack, const char *needle, size_t len)
 			j = 0;
 		i++;
 	}
-	return ((char *)haystack);
+	return (0);
 }
 /*
 **int main(int argc, char **argv)
 **{
 **	(void)argc;
-**	printf("%s",strnstr(argv[1],argv[2],200));
+**	printf("%s",ft_strnstr(argv[1],argv[2],ft_strlen(argv[1])));
 **	return 0;
 **}
 */

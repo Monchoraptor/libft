@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_calloc.c                                        :+:      :+:    :+:   */
+/*   ft_calloc.c                                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: amoracho <amoracho@student.42madrid>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/01/13 13:40:25 by amoracho          #+#    #+#             */
-/*   Updated: 2020/01/29 15:49:11 by amoracho         ###   ########.fr       */
+/*   Updated: 2020/07/11 00:21:47 by amoracho                   ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,8 +19,12 @@ void	*ft_calloc(size_t count, size_t size)
 	void *p;
 
 	p = (malloc(count * size));
-	ft_bzero(p, count * size);
-	return (p);
+	if (p)
+	{
+		ft_bzero(p, count * size);
+		return (p);
+	}
+	return (0);
 }
 /*
 **	int main()

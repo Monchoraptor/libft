@@ -1,50 +1,59 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strtrim.c                                       :+:      :+:    :+:   */
+/*   ft_strtrim.c                                                 :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: amoracho <amoracho@student.42madrid>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/01/21 17:06:07 by amoracho          #+#    #+#             */
-/*   Updated: 2020/01/30 11:18:18 by amoracho         ###   ########.fr       */
+/*   Updated: 2020/07/11 04:52:45 by amoracho                   ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+#include <stdio.h>
+#include <stdlib.h>
 
 char		*ft_strtrim(char const *s1, char const *set)
 {
-	int		i;
-	int		j;
-	char	*c;
+	int	i;
+	int	j;
+	int	k;
+	char	*aux;
 
+	j = ft_strlen(s1);
+	aux = malloc(j);
+	if (!aux)
+		return (0);
 	i = 0;
-	while (*(s1 + i) != '\0')
-		i -= -1;
-	c = malloc(i);
-	if (!c)
-		return (c);
-	i = 0;
-	j = 0;
-	while (*(s1 + i) != '\0')
+	while (ft_isin(set, *(s1 + i)))
+		i++;
+	while (ft_isin(set, *(s1 + j - 1)))
+		j--;
+	k = 0;
+	while (i < j)
 	{
-		if (!ft_isin(set, *(s1 + i)))
-		{
-			*(c + j) = *(s1 + i);
-			j -= -1;
-		}
-		i -= -1;
+		*(aux + k) = *(s1 + i);
+		i++;
+		k++;
 	}
-	*(c + j) = '\0';
-	return (c);
+	*(aux + k + 1) = '\0';
+	return (aux);
 }
 /*
-**int main()
+**int main(int argc, char **argv)
 **{
-**	char a[50]="YYaaa";
-**	char b[50]="a";
-**
-**	printf("%s",ft_strtrim(a,b));
+**	char *a = malloc(100);
+**	ft_strlcpy(a, argv[1], ft_strlen(argv[1]));
+** //	char *b = malloc(100);
+** //	if (b == 0) 
+** //	ft_strlcpy(b, argv[2], ft_strlen(argv[2]));
+**	char *b = "t";
+** //	printf("%s\n",a);
+** //	printf("%s\n",b);
+**	char *s1 = ""; 
+**	char *s2 = "a";
+**	printf("%s",ft_strtrim(s1,s2));
 **		//printf("%c/%i/%s\n",*(s1 + i),!ft_isin(set, *(s1 + i)),c);
 **}
 */
