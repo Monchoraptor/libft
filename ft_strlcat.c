@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strlcat.c                                       :+:      :+:    :+:   */
+/*   ft_strlcat.c                                                 :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: amoracho <amoracho@student.42madrid>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/01/08 16:12:58 by amoracho          #+#    #+#             */
-/*   Updated: 2020/07/11 16:25:02 by amoracho         ###   ########.fr       */
+/*   Updated: 2020/07/11 17:20:59 by amoracho                   ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,8 +19,8 @@ size_t	ft_strlcat(char *dst, char *src, size_t size)
 	size_t i;
 	size_t j;
 
-	if (size > 0 && size > ft_strlen(dst))
-	{
+	if (size > 0 && size - 1 > ft_strlen(dst))
+	 {
 		i = ft_strlen(dst);
 		j = 0;
 		while (*(src + j) && i < size - 1)
