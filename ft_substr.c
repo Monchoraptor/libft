@@ -6,7 +6,7 @@
 /*   By: amoracho <amoracho@student.42madrid>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/01/13 17:04:29 by amoracho          #+#    #+#             */
-/*   Updated: 2020/07/11 19:24:39 by amoracho                   ###   ########.fr       */
+/*   Updated: 2020/07/11 19:27:16 by amoracho                   ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,6 +27,7 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 	if (start >= ft_strlen(s))
 	{
 		*(p) = '\0';
+		return (p);
 	}
 	i = 0;
 	y = start;
