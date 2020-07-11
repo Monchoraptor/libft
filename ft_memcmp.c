@@ -6,7 +6,7 @@
 /*   By: amoracho <amoracho@student.42madrid>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/01/13 16:14:36 by amoracho          #+#    #+#             */
-/*   Updated: 2020/07/11 16:52:21 by amoracho                   ###   ########.fr       */
+/*   Updated: 2020/07/11 16:59:31 by amoracho                   ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,11 +22,12 @@ int	ft_memcmp(const void *s1, const void *s2, size_t n)
 	i = 0;
 	p1 = (unsigned char *)s1;
 	p2 = (unsigned char *)s2;
-	while ((p1[i] == p2[i]) && (i < n))
+	while (i < n)
+	{
+		if(p1[i] != p2[i])
+			return (p1[i] - p2[i]);
 		i++;
-	if (i == n)
-		return (0);
-	return (p1[i] - p2[i]);
+	return (0);
 }
 /*
 **	int main()
