@@ -6,7 +6,7 @@
 /*   By: amoracho <amoracho@student.42madrid>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/01/13 16:14:36 by amoracho          #+#    #+#             */
-/*   Updated: 2020/07/11 16:59:31 by amoracho                   ###   ########.fr       */
+/*   Updated: 2020/07/11 17:01:21 by amoracho         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,6 +27,7 @@ int	ft_memcmp(const void *s1, const void *s2, size_t n)
 		if(p1[i] != p2[i])
 			return (p1[i] - p2[i]);
 		i++;
+	}
 	return (0);
 }
 /*

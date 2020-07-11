@@ -6,7 +6,7 @@
 /*   By: amoracho <amoracho@student.42madrid>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/01/27 14:14:57 by amoracho          #+#    #+#             */
-/*   Updated: 2020/07/11 06:34:31 by amoracho                   ###   ########.fr       */
+/*   Updated: 2020/07/11 16:26:02 by amoracho         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,7 +33,7 @@ char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 		*(s2 + i) = f(i, *(s + i));
 		i++;
 	}
-	*(s + i) = '\0';
+	*(s2 + i) = '\0';
 	return (s2);
 }
 /*
