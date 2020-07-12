@@ -13,68 +13,81 @@
 #include "libft.h"
 #include <stdio.h>
 
-size_t	ft_countocurrences(char const *s, char c)
+int			ft_aux1(const char *s, char c)
 {
-	int		cu;
-	int		b;
+	int i;
 
-	b = 0;
-	cu = 0;
+	i = 0;
+	if (*s != c && *s)
+	{
+		s++;
+		i++;
+	}
 	while (*s)
 	{
-		if (*s == c)
-			b = 0;
-		else if (b == 0)
+		while (*s == c)
 		{
-			b = 1;
-			cu++;
+			s++;
+			if (*s != c && *s)
+				i++;
 		}
 		s++;
+	}
+	return (i);
+}
+
+int			ft_aux2(const char *str, char c)
+{
+	int cu;
+
+	cu = 0;
+	while (*str != c && *str)
+	{
+		cu++;
+		str++;
 	}
 	return (cu);
 }
 
-size_t	ft_c(char const *s, int pos, char c)
+void			*ft_aux3(char **ar)
 {
-	size_t	len;
-
-	len = 0;
-	while (s[pos])
-	{
-		if (s[pos] == c)
-			return (len);
-		len++;
-		pos++;
-	}
-	return (len);
-}
-
-char			**ft_split(char const *s, char c)
-{
-	char	**ar;
 	int		i;
-	int		j;
-	int		k;
 
 	i = 0;
-	j = 0;
-	k = 0;
-	if (!(ar = malloc(sizeof(char*) * (ft_countocurrences(s, c) + 1))))
-		return (NULL);
-	while (s[i])
+	while (ar[i])
 	{
-		if (s[i] != c)
-		{
-			if (k == 0)
-				if (!(ar[j] = (char*)malloc(sizeof(char) * ft_c(s, i, c) + 1)))
-					return (NULL);
-			ar[j][k] = s[i];
-			ar[j][++k] = '\0';
-		}
-		if ((s[i] == c && s[i + 1] != c && k > 0) && (k = 0) == 0)
-			j++;
+		free(ar[i++]);
 	}
-	ar[ft_countocurrences(s, c)] = NULL;
+	free(ar);
+	return (NULL);
+}
+
+char				**ft_split(char const *s, char c)
+{
+	int			j;
+	int			i;
+	char		**ar;
+
+	j = 0;
+	i = 0;
+	if (!s || (!(ar = (char **)malloc(sizeof(char *) * (ft_aux1(s, c) + 1)))))
+		return (NULL);
+	while (*s)
+	{
+		while (*s == c && *s)
+			s++;
+		if (*s != c && *s)
+		{
+			if (!(ar[j] = (char *)malloc(sizeof(char) * (ft_aux2(s, c) + 1))))
+				return (ft_aux3(ar));
+			while (*s && *s != c)
+				ar[j][i++] = (char)*s++;
+			ar[j][i] = '\0';
+			j++;
+			i = 0;
+		}
+	}
+	ar[j] = NULL;
 	return (ar);
 }
 
