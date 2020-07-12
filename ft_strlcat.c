@@ -24,19 +24,17 @@ size_t	ft_strlcat(char *dst, char *src, size_t size)
 		return (j);
 	while (*dst && size)
 	{
-		dst++;
 		i++;
+		dst++;
 		size--;
 	}
 	while (*src && size > 1)
 	{
-		*dst++ = *src++;
 		size--;
+		*dst++ = *src++;
 	}
 	if (size != 0)
-	{
 		*dst = '\0';
-	}
 	return (j + i);
 }
 /*

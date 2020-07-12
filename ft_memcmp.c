@@ -57,12 +57,12 @@ int	ft_memcmp(const void *s1, const void *s2, size_t n)
 **	//printf("Machine:%i\n",memcmp(a,b,10));
 **}
 **
+**
+**int main()
+**{
+**	char *s1 = ".........";
+**	char *s2 = ".........";
+**	printf("%i\n",ft_memcmp(s1,s2,10));
+**	printf("%i",memcmp(s1,s2,10));
+**}
 */
-int main()
-{
-	char *s1 = ".........";
-	char *s2 = ".........";
-	printf("%i\n",ft_memcmp(s1,s2,10));
-	printf("%i",memcmp(s1,s2,10));
-}
-	
