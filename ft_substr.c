@@ -6,7 +6,7 @@
 /*   By: amoracho <amoracho@student.42madrid>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/01/13 17:04:29 by amoracho          #+#    #+#             */
-/*   Updated: 2020/07/11 19:29:55 by amoracho                   ###   ########.fr       */
+/*   Updated: 2020/07/11 19:32:05 by amoracho                   ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,7 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 	char	*p;
 
 	p = malloc(len + 1);
-	if (start >= ft_strlen(s))
+	if (start >= ft_strlen(s) && p)
 	{
 		*(p) = '\0';
 		return (p);
