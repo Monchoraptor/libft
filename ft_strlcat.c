@@ -30,7 +30,7 @@ size_t	ft_strlcat(char *dst, char *src, size_t size)
 	}
 	while (*src && size > 1)
 	{
-		*dst++cd = *src++;
+		*dst++ = *src++;
 		size--;
 	}
 	if (size != 0)
