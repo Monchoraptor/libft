@@ -17,7 +17,7 @@ size_t	ft_countocurrences(char const *s, char c)
 {
 	int		cu;
 	int		b;
-	
+
 	b = 0;
 	cu = 0;
 	while (*s)
@@ -81,7 +81,8 @@ char			**ft_split(char const *s, char c)
 
 int main(int argc, char **argv)
 {
-	char s[50]="aaaXXaaXa";
+	(void)argc;
+	//char s[50]="aaaXXaaXa";
  //	printf("a\n");
 	char **p = ft_split(argv[1], argv[2][0]);
  //	printf("d\n");
