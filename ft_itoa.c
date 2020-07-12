@@ -12,6 +12,19 @@
 
 #include "libft.h"
 
+int		ft_count(int n)
+{
+	int				i;
+
+	i = 0;
+	while(n != 0)
+	{
+		n = n / 10;
+		i++;
+	}
+	return (i);
+}
+
 char	*ft_itoa(int n)
 {
 	char	*s;
