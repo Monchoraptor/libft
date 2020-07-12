@@ -17,6 +17,8 @@ char	*ft_itoa(int n)
 	char	*s;
 
 	s = malloc(12);
+	if (!s)
+		return (0);
 	ft_bzero(s, 12);
 	if (n == -2147483648)
 	{
