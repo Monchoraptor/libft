@@ -29,10 +29,10 @@ char	*ft_itoa(int n)
 {
 	char	*s;
 
-	s = malloc(12);
+	s = malloc(ft_count(n) + 2);
 	if (!s)
 		return (0);
-	ft_bzero(s, 12);
+	ft_bzero(s, ft_count(n) + 2);
 	if (n == -2147483648)
 	{
 		ft_strlcpy(s,"-2147483648",12);
