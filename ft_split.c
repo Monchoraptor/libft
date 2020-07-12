@@ -13,90 +13,89 @@
 #include "libft.h"
 #include <stdio.h>
 
-int	ft_countuntil(char const *s, char c)
+size_t	ft_countocurrences(char const *s, char c)
 {
-	int i;
+	int		count;
+	int		is_word;
 
-	i = 0;
-	while (*(s + i) != 0)
+	is_word = 0;
+	count = 0;
+	while (*s)
 	{
-		if (*(s + i) == c )
-			return(i);
-		i++;
+		if (*s == c)
+			is_word = 0;
+		else if (is_word == 0)
+		{
+			is_word = 1;
+			count++;
+		}
+		s++;
 	}
-	return (i);
+	return (count);
 }
 
-int	ft_countocurrences(char const *s, char c)
+size_t	ft_c(char const *s, int pos, char c)
 {
-	int i;
-	int j;
+	size_t	len;
 
-	i = 0;
-	j = 0;
-	while (*(s + j))
+	len = 0;
+	while (s[pos])
 	{
-		if (*(s + j) == c)
-			i++;
-		j++;
+		if (s[pos] == c)
+			return (len);
+		len++;
+		pos++;
 	}
-	return (i);
+	return (len);
 }
 
-char	*ft_chartostr(char c)
+char			**ft_split(char const *s, char c)
 {
-	char	*s;
-
-	s = malloc(sizeof(char) * 2);
-	if (s)
-	{
-		s[0] = c;
-		s[1] = '\0';
-	}
-	return (s);
-}
-
-char	**ft_split(char const *s, char c)
-{
-	int	i;
-	char	*aux;
 	char	**ar;
-	int	j;
+	int		i;
+	int		j;
+	int		k;
 
-	ar = malloc(sizeof(char *) * (ft_countocurrences(s, c) + 1));
-	if (!ar)
-		return (0);
 	i = 0;
 	j = 0;
-	while (i < ft_countocurrences(s, c) + 1)
+	k = 0;
+	if (!(ar = malloc(sizeof(char*) * (ft_countocurrences(s, c) + 1))))
+		return (NULL);
+	while (s[i++])
 	{
-		aux = ft_substr(s, j, ft_countuntil(s + j, c));
-		j = ft_strnstr(s + j, ft_chartostr(c),  ft_strlen(s + j)) - s + 1;
-		if (!aux)
-			return (0);
-		ar[i++] = aux;
+		if (s[i] != c)
+		{
+			if (k == 0)
+				if (!(ar[j] = (char*)malloc(sizeof(char) * ft_c(s, i, c) + 1)))
+					return (NULL);
+			ar[j][k] = s[i];
+			ar[j][++k] = '\0';
+		}
+		if ((s[i] == c && s[i + 1] != c && k > 0) && (k = 0) == 0)
+			j++;
 	}
+	ar[ft_countocurrences(s, c)] = NULL;
 	return (ar);
 }
-/*
-**
-**int main(int argc, char **argv)
-**{
-**	char s[50]="aaaXXaaXa";
-** //	printf("a\n");
-**	char **p = ft_split(argv[1], argv[2][0]);
-** //	printf("d\n");
-**	int i = 0;
-**	if (p)
-**	{
-**		while(i < 4)
-**		{
-**			if(p[i])
-**				printf("%s\n",p[i]);
-**			//printf("%i|%c\n",p[0][i],p[0][i]);
-**			i -= -1;
-**		}
-**	}
-**	return (0);
-**}
-*/
+
+
+int main(int argc, char **argv)
+{
+	char s[50]="aaaXXaaXa";
+ //	printf("a\n");
+	char **p = ft_split(argv[1], argv[2][0]);
+ //	printf("d\n");
+	int i = 0;
+if (p)
+	{
+	while(i < argv[3][0] - '0')
+		{
+			if(p[i])
+				printf("%s\n",p[i]);
+			//printf("%i|%c\n",p[0][i],p[0][i]);
+			i -= -1;
+		}
+	}
+	return (0);
+}
+
