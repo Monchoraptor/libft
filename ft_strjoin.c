@@ -27,7 +27,10 @@ char	*ft_strjoin(const char *s1, const char *s2)
 	if (!aux)
 		return (NULL);
 	while (s1[i])
-		aux[i] = s1[i++];
+	{
+		aux[i] = s1[i];
+		i++;
+	}
 	while (s2[j])
 		aux[i++] = s2[j++];
 	aux[i] = '\0';
