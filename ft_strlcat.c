@@ -22,20 +22,20 @@ size_t	ft_strlcat(char *dst, char *src, size_t size)
 	j = ft_strlen(src);
 	if (!size)
 		return (j);
-	while (*dest && size)
+	while (*dst && size)
 	{
-		dest++;
+		dst++;
 		i++;
 		size--;
 	}
 	while (*src && size > 1)
 	{
-		*dest++ = *src++;
+		*dst++cd = *src++;
 		size--;
 	}
 	if (size != 0)
 	{
-		*dest = '\0';
+		*dst = '\0';
 	}
 	return (j + i);
 }
