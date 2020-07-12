@@ -78,7 +78,7 @@ char			**ft_split(char const *s, char c)
 	return (ar);
 }
 
-
+/*
 int main(int argc, char **argv)
 {
 	(void)argc;
@@ -99,4 +99,4 @@ if (p)
 	}
 	return (0);
 }
-
+*/
