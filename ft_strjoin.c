@@ -17,27 +17,21 @@
 
 char	*ft_strjoin(const char *s1, const char *s2)
 {
-	int	i;
-	int	j;
-	char	*s;
+	size_t	i;
+	size_t	j;
+	char	*aux;
 
-	i = ft_strlen(s1);
-	j = ft_strlen(s2);
-	s = (char *)malloc(i + j);
-	if (s == 0)
-		return (0);
-	i = -1;
-	while (*(s1 + ++i) != '\0')
-		*(s + i) = *(s1 + i);
+	i = 0;
 	j = 0;
-	while (*(s2 + j) != '\0')
-	{
-		*(s + i) = *(s2 + j);
-		j++;
-		i++;
-	}
-	*(s + i) = *(s2 + j);
-	return (s);
+	aux = malloc(sizeof(char) * (ft_strlen(s1) + ft_strlen(s2) + 1));
+	if (!aux)
+		return (NULL);
+	while (s1[i])
+		aux[i] = s1[i++];
+	while (s2[j])
+		aux[i++] = s2[j++];
+	aux[i] = '\0';
+	return (aux);
 }
 /*
 **int		main()
