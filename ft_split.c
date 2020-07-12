@@ -13,6 +13,27 @@
 #include "libft.h"
 #include <stdio.h>
 
+size_t	ft_countocurrences(char const *s, char c)
+{
+	int		cu;
+	int		b;
+	
+	b = 0;
+	cu = 0;
+	while (*s)
+	{
+		if (*s == c)
+			b = 0;
+		else if (b == 0)
+		{
+			b = 1;
+			cu++;
+		}
+		s++;
+	}
+	return (cu);
+}
+
 size_t	ft_c(char const *s, int pos, char c)
 {
 	size_t	len;
@@ -28,27 +49,6 @@ size_t	ft_c(char const *s, int pos, char c)
 	return (len);
 }
 
-size_t	ft_countocurrences(char const *s, char c)
-{
-	int		c;
-	int		b;
-
-	b = 0;
-	c = 0;
-	while (*s)
-	{
-		if (*s == c)
-			b = 0;
-		else if (b == 0)
-		{
-			b = 1;
-			c++;
-		}
-		s++;
-	}
-	return (c);
-}
-
 char			**ft_split(char const *s, char c)
 {
 	char	**ar;
@@ -61,7 +61,7 @@ char			**ft_split(char const *s, char c)
 	k = 0;
 	if (!(ar = malloc(sizeof(char*) * (ft_countocurrences(s, c) + 1))))
 		return (NULL);
-	while (s[i++])
+	while (s[i])
 	{
 		if (s[i] != c)
 		{
@@ -77,25 +77,25 @@ char			**ft_split(char const *s, char c)
 	ar[ft_countocurrences(s, c)] = NULL;
 	return (ar);
 }
-/*
-**	int main(int argc, char **argv)
-**	{
-**
-**		char s[50]="aaaXXaaXa";
-**	 //	printf("a\n");
-**		char **p = ft_split(argv[1], argv[2][0]);
-**	 //	printf("d\n");
-**	int i = 0;
-**	if (p)
-**		{
-**		while(i < argv[3][0] - '0')
-**			{
-**				if(p[i])
-**						printf("%s\n",p[i]);
-**				//printf("%i|%c\n",p[0][i],p[0][i]);
-**			i -= -1;
-**		}
-**		}
-**		return (0);
-**	}
-*/
+
+
+int main(int argc, char **argv)
+{
+	char s[50]="aaaXXaaXa";
+ //	printf("a\n");
+	char **p = ft_split(argv[1], argv[2][0]);
+ //	printf("d\n");
+	int i = 0;
+if (p)
+	{
+	while(i < argv[3][0] - '0')
+		{
+			if(p[i])
+				printf("%s\n",p[i]);
+			//printf("%i|%c\n",p[0][i],p[0][i]);
+			i -= -1;
+		}
+	}
+	return (0);
+}
+
