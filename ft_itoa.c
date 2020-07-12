@@ -17,6 +17,7 @@ char	*ft_itoa(int n)
 	char	*s;
 
 	s = malloc(11);
+	ft_bzero(s, 11);
 	if (n == -2147483648)
 	{
 		ft_strlcpy(s,"-2147483648",12);
