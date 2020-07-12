@@ -6,13 +6,12 @@
 /*   By: amoracho <amoracho@student.42madrid>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/01/08 16:12:58 by amoracho          #+#    #+#             */
-/*   Updated: 2020/07/11 17:44:12 by amoracho                   ###   ########.fr       */
+/*   Updated: 2020/07/11 17:45:50 by amoracho         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdio.h>
 #include "libft.h"
-#include <bsd/string.h>
 
 size_t	ft_strlcat(char *dst, char *src, size_t size)
 {
