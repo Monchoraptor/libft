@@ -61,8 +61,8 @@ char			*ft_itoa(int n)
 		s[i++] = n % 10 + '0';
 	if (signo < 0)
 		s[i++] = '-';
-	s[i] = '\0';
 	ft_reverse(s);
+	s[i] = '\0';
 	return (s);
 }
 /*
