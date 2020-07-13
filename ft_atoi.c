@@ -36,7 +36,7 @@ int				ft_atoi(const char *str)
 {
 	int				i;
 	unsigned long	aux;
-	int		s;
+	int				s;
 
 	i = 0;
 	while (ft_isspace(*(str + i)))
@@ -53,7 +53,7 @@ int				ft_atoi(const char *str)
 	{
 		return (0);
 	}
-	if(s != 0)
+	if (s != 0)
 		return ((int)s * aux);
 	return ((int)aux);
 }
