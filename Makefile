@@ -35,10 +35,6 @@ ${NAME}:	${OBJS}
 		${AR} ${NAME} ${OBJS}
 		${RANLIB} ${NAME}
 
-${NAMESO}:	${OBJS}
-		${AR} ${NAMESO} ${OBJS}
-		${RANLIB} ${NAMESO}
-
 all:		${NAME}
 
 clean:
@@ -50,6 +46,3 @@ fclean:		clean
 re:			fclean all bonus
 
 .PHONY:		all clean fclean re bonus
-
-so:
-	gcc -fPIC -Wl,-soname,libft.so -o libft.so *.o
