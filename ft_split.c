@@ -13,7 +13,7 @@
 #include "libft.h"
 #include <stdio.h>
 
-int			ft_aux1(const char *s, char c)
+int		ft_aux1(const char *s, char c)
 {
 	int i;
 
@@ -36,7 +36,7 @@ int			ft_aux1(const char *s, char c)
 	return (i);
 }
 
-int			ft_aux2(const char *str, char c)
+int		ft_aux2(const char *str, char c)
 {
 	int cu;
 
@@ -49,7 +49,7 @@ int			ft_aux2(const char *str, char c)
 	return (cu);
 }
 
-void			*ft_aux3(char **ar)
+void	*ft_aux3(char **ar)
 {
 	int		i;
 
@@ -62,7 +62,7 @@ void			*ft_aux3(char **ar)
 	return (NULL);
 }
 
-char				**ft_split(char const *s, char c)
+char	**ft_split(char const *s, char c)
 {
 	int			j;
 	int			i;
@@ -90,7 +90,6 @@ char				**ft_split(char const *s, char c)
 	ar[j] = NULL;
 	return (ar);
 }
-
 /*
 **int main(int argc, char **argv)
 **{
