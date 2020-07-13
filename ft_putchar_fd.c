@@ -12,7 +12,7 @@
 
 #include <unistd.h>
 
-void	ft_putchar_fd(int c, int fd)
+void	ft_putchar_fd(unsigned int c, int fd)
 {
 	write(fd, &c, 1);
 }
