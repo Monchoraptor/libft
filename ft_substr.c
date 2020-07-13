@@ -37,7 +37,7 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 		i++;
 		y++;
 	}
-	*(p + i) = '\0';	
+	*(p + i) = '\0';
 	return (p);
 }
 /*
@@ -45,7 +45,7 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 **{
 ** //	char a[10] = "qwerty";
 ** //	char b[10] = "";
-**	char *s;	
+**	char *s;
 **	s = ft_substr(argv[1],argv[2][0]-'0',10);
 **	if (s != 0)
 **		printf("%s",s);
