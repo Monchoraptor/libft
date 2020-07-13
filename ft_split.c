@@ -83,8 +83,8 @@ char				**ft_split(char const *s, char c)
 			while (*s && *s != c)
 				ar[j][i++] = (char)*s++;
 			ar[j][i] = '\0';
-			i = 0;
 			j++;
+			i = 0;
 		}
 	}
 	ar[j] = NULL;
