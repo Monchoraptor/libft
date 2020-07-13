@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_atoi.c                                          :+:      :+:    :+:   */
+/*   ft_atoi.c                                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: amoracho <amoracho@student.42madrid>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/01/10 19:05:05 by amoracho          #+#    #+#             */
-/*   Updated: 2020/07/13 18:37:38 by amoracho         ###   ########.fr       */
+/*   Updated: 2020/07/14 01:41:41 by amoracho                   ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -57,12 +57,12 @@ int						ft_atoi(const char *str)
 		return ((int)s * aux);
 	return ((int)aux);
 }
-
-int main(int argc, char **argv)
-{
-(void)argc;
-printf("%i\n",ft_atoi(argv[1]));
-printf("%i",atoi(argv[1]));
-		return 0;
-}
-
+/*
+**int main(int argc, char **argv)
+**{
+**(void)argc;
+**printf("%i\n",ft_atoi(argv[1]));
+**printf("%i",atoi(argv[1]));
+**		return 0;
+**}
+*/
