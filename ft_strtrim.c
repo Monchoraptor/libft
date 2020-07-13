@@ -37,7 +37,6 @@ char		*ft_strtrim(char const *s1, char const *set)
 	return (aux);
 }
 /*
-**
 **		int main(int argc, char **argv)
 **		{
 **		char *a = malloc(100);
