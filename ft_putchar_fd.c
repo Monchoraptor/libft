@@ -11,16 +11,20 @@
 /* ************************************************************************** */
 
 #include <unistd.h>
+#include <stdio.h>
 
-void	ft_putchar_fd(unsigned int c, int fd)
+void	ft_putchar_fd(int c, int fd)
 {
 	write(fd, &c, 1);
 }
 /*
-**int main()
-**{
-**	ft_putchar_fd('4',1);
-**	ft_putchar_fd('2',1);
-**	ft_putchar_fd('\n',1);
-**}
+
+int main()
+{
+	printf("%i",*L"ø");
+//	ft_putchar_fd('4',1);
+//	ft_putchar_fd('2',1);
+//	ft_putchar_fd('\n',1);
+}
 */
+
