@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strlcpy.c                                                 :+:      :+:    :+:   */
+/*   ft_strlcpy.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: amoracho <amoracho@student.42madrid>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/01/08 16:12:58 by amoracho          #+#    #+#             */
-/*   Updated: 2020/07/11 02:52:35 by amoracho                   ###   ########.fr       */
+/*   Updated: 2020/07/11 02:52:35 by amoracho         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,7 +30,6 @@ size_t	ft_strlcpy(char *dst, char *src, size_t size)
 	}
 	dst[i] = '\0';
 	return ((unsigned int)ft_strlen(src));
-
 }
 /*
 **int main(int argc, char **argv)

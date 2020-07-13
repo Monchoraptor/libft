@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strnstr.c                                                 :+:      :+:    :+:   */
+/*   ft_strnstr.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: amoracho <amoracho@student.42madrid>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/01/10 17:56:53 by amoracho          #+#    #+#             */
-/*   Updated: 2020/07/11 18:53:20 by amoracho                   ###   ########.fr       */
+/*   Updated: 2020/07/11 18:53:20 by amoracho         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,7 +28,7 @@ char	*ft_strnstr(const char *haystack, const char *needle, size_t len)
 		if (needle[0] == haystack[i])
 		{
 			while (haystack[i + j] == needle[j] && (size_t)(i + j) < len
-				&& needle[j] != '\0' )
+				&& needle[j] != '\0')
 				j++;
 			if (needle[j] == '\0')
 				return ((char*)&haystack[i]);
