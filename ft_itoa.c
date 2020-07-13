@@ -15,17 +15,17 @@
 static int		ft_count(int n)
 {
 	int i;
-	int s;
 
-	s = 0;
 	if (n < 0)
-		s = 1;
-	i= 0;
+	{
+		n = n * -1;
+		i++;
+	}
 	while (n != 0) {
 		n /= 10;
 		++i;
 	}
-	return (i + s + 1);
+	return (i + 1);
 }
 
 static void		ft_reverse(char *s)
