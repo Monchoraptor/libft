@@ -37,21 +37,21 @@ char		*ft_strtrim(char const *s1, char const *set)
 	return (aux);
 }
 /*
-
-	int main(int argc, char **argv)
-	{
-	char *a = malloc(100);
-	ft_strlcpy(a, argv[1], ft_strlen(argv[1]));
- //	char *b = malloc(100);
- //	if (b == 0)
- //	ft_strlcpy(b, argv[2], ft_strlen(argv[2]));
-	char *b = "t";
- //	printf("%s\n",a);
- //	printf("%s\n",b);
-	char *s1 = "";
-	char *s2 = "a";
-	printf("-->%s<--",ft_strtrim(s1,s2));
-		//printf("%c/%i/%s\n",*(s1 + i),!ft_isin(set, *(s1 + i)),c);
-	}
-
+**
+**		int main(int argc, char **argv)
+**		{
+**		char *a = malloc(100);
+**		ft_strlcpy(a, argv[1], ft_strlen(argv[1]));
+**	 //	char *b = malloc(100);
+**	 //	if (b == 0)
+**	 //	ft_strlcpy(b, argv[2], ft_strlen(argv[2]));
+**		char *b = "t";
+**	 //	printf("%s\n",a);
+**	 //	printf("%s\n",b);
+**		char *s1 = "";
+**		char *s2 = "a";
+**		printf("-->%s<--",ft_strtrim(s1,s2));
+**			//printf("%c/%i/%s\n",*(s1 + i),!ft_isin(set, *(s1 + i)),c);
+**		}
+**
 */
