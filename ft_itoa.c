@@ -17,6 +17,8 @@ static int	ft_count(int n)
 	int	i;
 
 	i = 0;
+	if (n == 0)
+		i++;
 	if (n < 0)
 	{
 		n = n * -1;
