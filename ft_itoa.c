@@ -14,7 +14,7 @@
 
 static int	ft_count(int n)
 {
-	int i;
+	int	i;
 
 	i = 0;
 	if (n < 0)
@@ -22,11 +22,13 @@ static int	ft_count(int n)
 		n = n * -1;
 		i++;
 	}
-	while (n != 0) {
-		n /= 10;
-		++i;
+	while (n)
+	{
+		n = n / 10;
+		i++;
 	}
-	return (i + 1);
+	return (i);
+
 }
 
 char		*ft_itoa(int n)
