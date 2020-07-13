@@ -90,7 +90,6 @@ char	**ft_split(char const *s, char c)
 	ar[j] = NULL;
 	return (ar);
 }
-
 /*
 **int main(int argc, char **argv)
 **{
