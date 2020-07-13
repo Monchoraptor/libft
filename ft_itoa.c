@@ -62,6 +62,7 @@ char		*ft_itoa(int n)
 
 int main(int argc, char **argv)
 {
+	(void)argc;
 	printf("%s\n",ft_itoa(ft_atoi(argv[1])));
 }
 
