@@ -6,14 +6,14 @@
 /*   By: amoracho <amoracho@student.42madrid>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/01/10 19:05:05 by amoracho          #+#    #+#             */
-/*   Updated: 2020/07/11 00:20:06 by amoracho         ###   ########.fr       */
+/*   Updated: 2020/07/13 18:37:38 by amoracho         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 #include <stdio.h>
 
-unsigned long	ft_atoul(const char *str)
+static unsigned long	ft_atoul(const char *str)
 {
 	int				i;
 	unsigned long	aux;
@@ -32,7 +32,7 @@ unsigned long	ft_atoul(const char *str)
 	return (aux);
 }
 
-int				ft_atoi(const char *str)
+int						ft_atoi(const char *str)
 {
 	int				i;
 	unsigned long	aux;
@@ -57,12 +57,12 @@ int				ft_atoi(const char *str)
 		return ((int)s * aux);
 	return ((int)aux);
 }
-/*
-**int main(int argc, char **argv)
-**{
-**(void)argc;
-**printf("%i\n",ft_atoi(argv[1]));
-**printf("%i",atoi(argv[1]));
-**		return 0;
-**}
-*/
+
+int main(int argc, char **argv)
+{
+(void)argc;
+printf("%i\n",ft_atoi(argv[1]));
+printf("%i",atoi(argv[1]));
+		return 0;
+}
+

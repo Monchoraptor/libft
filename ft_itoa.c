@@ -6,13 +6,13 @@
 /*   By: amoracho <amoracho@student.42madrid>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/01/21 21:15:26 by amoracho          #+#    #+#             */
-/*   Updated: 2020/07/11 06:10:45 by amoracho         ###   ########.fr       */
+/*   Updated: 2020/07/13 16:13:22 by amoracho         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int		ft_count(int n)
+static int		ft_count(int n)
 {
 	int				i;
 
@@ -25,7 +25,7 @@ int		ft_count(int n)
 	return (i);
 }
 
-char	*ft_itoa(int n)
+char			*ft_itoa(int n)
 {
 	char	*s;
 

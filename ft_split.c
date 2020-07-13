@@ -6,14 +6,14 @@
 /*   By: amoracho <amoracho@student.42madrid>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/01/21 17:59:13 by amoracho          #+#    #+#             */
-/*   Updated: 2020/07/11 05:46:35 by amoracho         ###   ########.fr       */
+/*   Updated: 2020/07/13 16:13:46 by amoracho         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 #include <stdio.h>
 
-int		ft_aux1(const char *s, char c)
+static int		ft_aux1(const char *s, char c)
 {
 	int i;
 
@@ -36,7 +36,7 @@ int		ft_aux1(const char *s, char c)
 	return (i);
 }
 
-int		ft_aux2(const char *str, char c)
+static int		ft_aux2(const char *str, char c)
 {
 	int cu;
 
@@ -49,7 +49,7 @@ int		ft_aux2(const char *str, char c)
 	return (cu);
 }
 
-void	*ft_aux3(char **ar)
+static void		*ft_aux3(char **ar)
 {
 	int		i;
 
@@ -62,7 +62,7 @@ void	*ft_aux3(char **ar)
 	return (NULL);
 }
 
-char	**ft_split(char const *s, char c)
+char			**ft_split(char const *s, char c)
 {
 	int			j;
 	int			i;
