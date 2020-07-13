@@ -28,7 +28,7 @@ static int		ft_count(int n)
 	return (i + s + 1);
 }
 
-static int		ft_reverse(char *s)
+static void		ft_reverse(char *s)
 {
 	int		i;
 	int		j;
@@ -63,6 +63,7 @@ char			*ft_itoa(int n)
 		s[i++] = '-';
 	s[i] = '\0';
 	ft_reverse(s);
+	return (s);
 }
 /*
 **int main(int argc, char **argv)
