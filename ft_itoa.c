@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_itoa.c                                          :+:      :+:    :+:   */
+/*   ft_itoa.c                                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: amoracho <amoracho@student.42madrid>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/01/21 21:15:26 by amoracho          #+#    #+#             */
-/*   Updated: 2020/07/13 16:13:22 by amoracho         ###   ########.fr       */
+/*   Updated: 2020/07/14 00:43:30 by amoracho                   ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,42 +14,55 @@
 
 static int		ft_count(int n)
 {
-	int				i;
+	int i;
+	int s;
+
+	s = 0;
+	if (n < 0)
+		s = 1;
+	i= 0;
+	while (n != 0) {
+		n /= 10;
+		++i;
+	}
+	return (i + s + 1);
+}
+
+static int		ft_reverse(char *s)
+{
+	int		i;
+	int		j;
+	char	c;
 
 	i = 0;
-	while (n != 0)
+	j = ft_strlen(s) - 1;
+	while (i < j)
 	{
-		n = n / 10;
+		c = s[i];
+		s[i] = s[j];
+		s[j] = c;
 		i++;
+		j--;
 	}
-	return (i);
 }
 
 char			*ft_itoa(int n)
 {
 	char	*s;
+	int		i;
+	int		signo;
 
-	s = malloc(ft_count(n) + 2);
-	if (!s)
+	if (!(s = malloc(ft_count(n))))
 		return (0);
-	ft_bzero(s, ft_count(n) + 2);
-	if (n == -2147483648)
-	{
-		ft_strlcpy(s, "-2147483648", 12);
-		return (s);
-	}
-	if (n < 0)
-	{
-		*s = '-';
-		return (ft_strjoin(s, ft_itoa(-1 * n)));
-	}
-	*s = (n % 10) + '0';
-	if (n < 10)
-	{
-		*(s + 1) = '\0';
-		return (s);
-	}
-	return (ft_strjoin(ft_itoa(n / 10), s));
+	if ((signo = n) < 0)
+		n = -n;
+	i = 0;
+	while ((n /= 10) > 0)
+		s[i++] = n % 10 + '0';
+	if (signo < 0)
+		s[i++] = '-';
+	s[i] = '\0';
+	ft_reverse(s);
 }
 /*
 **int main(int argc, char **argv)
