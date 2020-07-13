@@ -58,12 +58,12 @@ char			*ft_itoa(int n)
 	if ((signo = n) < 0)
 		n = -n;
 	i = 0;
-	s[i] = '\0';
 	while ((n /= 10) > 0)
 		s[i++] = n % 10 + '0';
 	if (signo < 0)
 		s[i++] = '-';
 	ft_reverse(s);
+	s[i] = '\0';
 	return (s);
 }
 /*
