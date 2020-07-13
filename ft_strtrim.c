@@ -52,5 +52,4 @@ char		*ft_strtrim(char const *s1, char const *set)
 **		printf("-->%s<--",ft_strtrim(s1,s2));
 **			//printf("%c/%i/%s\n",*(s1 + i),!ft_isin(set, *(s1 + i)),c);
 **		}
-**
 */
