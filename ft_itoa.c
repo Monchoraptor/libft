@@ -12,7 +12,7 @@
 
 #include "libft.h"
 
-static int		ft_count(int n)
+static int	ft_count(int n)
 {
 	int i;
 
@@ -29,42 +29,31 @@ static int		ft_count(int n)
 	return (i + 1);
 }
 
-static void		ft_reverse(char *s)
+char		*ft_itoa(int n)
 {
+	long	ln;
 	int		i;
-	int		j;
-	char	c;
-
-	i = 0;
-	j = ft_strlen(s) - 1;
-	while (i < j)
-	{
-		c = s[i];
-		s[i] = s[j];
-		s[j] = c;
-		i++;
-		j--;
-	}
-}
-
-char			*ft_itoa(int n)
-{
 	char	*s;
-	int		i;
-	int		signo;
 
-	if (!(s = malloc(ft_count(n))))
-		return (0);
-	if ((signo = n) < 0)
-		n = -n;
-	i = 0;
-	while ((n /= 10) > 0)
-		s[i++] = n % 10 + '0';
-	if (signo < 0)
-		s[i++] = '-';
-	ft_reverse(s);
+	ln = n;
+	i = ft_count(n);
+	if (!(s = (char*)malloc(sizeof(char) * (i + 1))))
+		return (NULL);
+	if (ln < 0)
+	{
+		s[0] = '-';
+		ln = ln * -1;
+	}
 	s[i] = '\0';
+	i -= 1;
+	while (ln > 0)
+	{
+		s[i] = ln % 10 + '0';
+		ln = ln / 10;
+		i--;
+	}
 	return (s);
+
 }
 /*
 **int main(int argc, char **argv)
