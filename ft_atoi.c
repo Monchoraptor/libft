@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_atoi.c                                                    :+:      :+:    :+:   */
+/*   ft_atoi.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: amoracho <amoracho@student.42madrid>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/01/10 19:05:05 by amoracho          #+#    #+#             */
-/*   Updated: 2020/07/11 00:20:06 by amoracho                   ###   ########.fr       */
+/*   Updated: 2020/07/11 00:20:06 by amoracho         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 
 unsigned long	ft_atoul(const char *str)
 {
-	int		i;
+	int				i;
 	unsigned long	aux;
 
 	i = 0;
@@ -25,16 +25,16 @@ unsigned long	ft_atoul(const char *str)
 		aux = ((aux * 10) + (*(str + i) - 48));
 		if (aux > 9223372036854775808ul)
 		{
-			return(9223372036854775809ul);
+			return (9223372036854775809ul);
 		}
 		i++;
 	}
 	return (aux);
 }
 
-int	ft_atoi(const char *str)
+int				ft_atoi(const char *str)
 {
-	int		i;
+	int				i;
 	unsigned long	aux;
 	int		s;
 
@@ -45,12 +45,14 @@ int	ft_atoi(const char *str)
 		return (0);
 	s = ft_issign(*(str + i));
 	if (ft_issign(*(str + i)))
-		i++;	
+		i++;
 	aux = ft_atoul(str + i);
 	if ((aux > 9223372036854775807ul) && (s == 1 || s == 0))
 		return (-1);
-	else if ((aux > 9223372036854775808ul) && s == -1){
-		return (0);}
+	else if ((aux > 9223372036854775808ul) && s == -1)
+	{
+		return (0);
+	}
 	if(s != 0)
 		return ((int)s * aux);
 	return ((int)aux);
