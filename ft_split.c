@@ -91,24 +91,25 @@ char				**ft_split(char const *s, char c)
 	return (ar);
 }
 
-
-int main(int argc, char **argv)
-{
-	(void)argc;
-	//char s[50]="aaaXXaaXa";
- //	printf("a\n");
-	char **p = ft_split(argv[1], argv[2][0]);
- //	printf("d\n");
-	int i = 0;
-if (p)
-	{
-	while(i < argv[3][0] - '0')
-		{
-			if(p[i])
-				printf("%s\n",p[i]);
-			//printf("%i|%c\n",p[0][i],p[0][i]);
-			i -= -1;
-		}
-	}
-	return (0);
-}
+/*
+**int main(int argc, char **argv)
+**{
+**	(void)argc;
+**	//char s[50]="aaaXXaaXa";
+** //	printf("a\n");
+**	char **p = ft_split(argv[1], argv[2][0]);
+** //	printf("d\n");
+**	int i = 0;
+**if (p)
+**	{
+**	while(i < argv[3][0] - '0')
+**		{
+**			if(p[i])
+**				printf("%s\n",p[i]);
+**			//printf("%i|%c\n",p[0][i],p[0][i]);
+**			i -= -1;
+**		}
+**	}
+**	return (0);
+**}
+*/
