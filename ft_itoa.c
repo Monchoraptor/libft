@@ -49,15 +49,15 @@ char		*ft_itoa(int n)
 		ln = ln * -1;
 	}
 	s[i] = '\0';
-	i -= 1;
+	i = i - 1;
+	if (ln == 0)
+		s[i] = '0';
 	while (ln > 0)
 	{
-		s[i] = ln % 10 + '0';
+		s[i--] = ln % 10 + '0';
 		ln = ln / 10;
-		i--;
 	}
 	return (s);
-
 }
 
 int main(int argc, char **argv)
