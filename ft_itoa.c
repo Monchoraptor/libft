@@ -59,12 +59,10 @@ char		*ft_itoa(int n)
 	return (s);
 }
 /*
-
-	int main(int argc, char **argv)
-	{
-		(void)argc;
-	//	printf("%s\n",ft_itoa(ft_atoi(argv[1])));
-		printf("%i",ft_count(0));
-	}
+**	int main(int argc, char **argv)
+**	{
+**		(void)argc;
+**	//	printf("%s\n",ft_itoa(ft_atoi(argv[1])));
+**		printf("%i",ft_count(0));
+**	}
 */
-
