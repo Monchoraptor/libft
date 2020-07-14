@@ -17,6 +17,8 @@ static int	ft_count(long n)
 	int i;
 
 	i = 0;
+	if (n == 0)
+		return (1);
 	if (n < 0)
 	{
 		n = n * -1;
@@ -57,10 +59,12 @@ char		*ft_itoa(int n)
 	return (s);
 }
 /*
-**	int main(int argc, char **argv)
-**	{
-**		(void)argc;
-**		printf("%s\n",ft_itoa(ft_atoi(argv[1])));
-**	//	printf("%i",ft_count(-2147483648));
-**	}
+
+	int main(int argc, char **argv)
+	{
+		(void)argc;
+	//	printf("%s\n",ft_itoa(ft_atoi(argv[1])));
+		printf("%i",ft_count(0));
+	}
 */
+
